@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>What happened to you?</h1>
+      <input type="text" id="get_response" /> <br />
+      <br />
+      <button class="submit" onclick="sub()">submit</button>
+    </div>
+    <style>
+      body {
+        background-color: bisque;
+      }
+      div {
+        border: 1px solid green;
+        width: 30em;
+        margin: auto;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: whitesmoke;
+      }
+    </style>
+    <script>
+      let myArray = [
+        "Gloomy",
+        "Melancholy",
+        "Miserable",
+        "Somber",
+        "Despondent",
+        "Sorrowful",
+        "Blue",
+        "Depressed",
+        "Dismal",
+        "Downcast",
+        "Heartbroken",
+        "Wistful",
+        "Pensive",
+        "Regretful",
+        "Woeful",
+      ];
+
+      function sub() {
+        const insert = document.getElementById("get_response");
+        const valueInpt = insert.value;
+
+        if (myArray.includes(valueInpt)) {
+          console.log("found");
+          alert(`${valueInpt}`);
+        } else if (myArray.includes(valueInpt) != valueInpt) {
+          console.log("not Correct");
+          alert(`Not found`);
+        }
+      }
+    </script>
+  </body>
+</html>
